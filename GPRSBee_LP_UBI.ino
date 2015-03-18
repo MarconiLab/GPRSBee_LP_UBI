@@ -251,11 +251,11 @@ String createDataURL()
   url += String(OTHER_SEP) + String("value");
   url += String(LABEL_DATA_SEP) + String(RTC.getTemperature());
    
- /* url += String(OTHER_SEP) + String("variable");
+  url += String(OTHER_SEP) + String("variable");
   url += String(LABEL_DATA_SEP) + String(WRITE_VARIABLE2);
   
   url += String(OTHER_SEP) + String("value");
-  url += String(LABEL_DATA_SEP) + String(analogRead(A7)* (1.1 / 1024)* (10+2)/2);*/
+  url += String(LABEL_DATA_SEP) + String(analogRead(A7)* (1.1 / 1024)* (10+2)/2);
  
    return url;  
 }
