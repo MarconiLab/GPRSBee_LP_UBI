@@ -49,8 +49,8 @@ The code uses Stalker + GPRSBee
   
 
 ## Correct post to Ubidots from serial monitor
->> AT
-OK
+  >> AT
+  OK
 >> AT+CREG?
 +CREG: 0,5
 OK
