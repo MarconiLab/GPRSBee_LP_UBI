@@ -49,96 +49,48 @@ The code uses Stalker + GPRSBee
   
 
 ## Correct post to Ubidots from serial monitor
-+CSQ: 13,0
-
-OK
->> AT+CREG?
-
-+CREG: 0,2
-
-OK
 >> AT
-
 OK
 >> AT+CREG?
-
-+CREG: 0,2
-
-OK
->> AT
-
-OK
->> AT+CREG?
-
-+CREG: 0,2
-
-OK
->> AT
-
-OK
->> AT+CREG?
-
 +CREG: 0,5
-
 OK
 >> AT+CGATT=1
-
 OK
 >> AT+SAPBR=3,1,"CONTYPE","GPRS"
-
 OK
 >> AT+SAPBR=3,1,"APN","internet.wind"
-
 OK
 >> AT+SAPBR=1,1
-
 OK
 >> AT+SAPBR=2,1
-
 +SAPBR: 1,1,"10.196.63.161"
-
 OK
 >> AT+COPS=?
-
 +COPS: (2,"Si.mobil","","29340"),,(0,1,4),(0,1,2)
-
 OK
 >> AT+COPS?
-
 +COPS: 0,0,"Si.mobil"
-
 OK
 >> AT+HTTPINIT
-
 OK
 >> AT+HTTPPARA="CID",1
-
 OK
->> AT+HTTPPARA="URL","http://50.23.124.66/api/postvalue/?token=YRWsXoUOptheqaDFN2T58o65hyHe4m&variable=54db5c1176254262808e8f2b&value=27.75"
-
+>> AT+HTTPPARA="URL","http://50.23.124.66/api/postvalue/?token=YRWsXoUOptheqaDFN2T58o65hyHe4m&variable=54db5c1176254262808e8f2b&value=24.75&variable=54db5c2f7625426145480fdd&value=3.83"
 OK
 >> >> AT+HTTPPARA="REDIR",1
-
 OK
 >> AT+HTTPACTION=0
-
 OK
-+HTTPACTION:0,201,168
-doHTTPGET failed!
-
++HTTPACTION:0,200,41
 >> AT+HTTPREAD
-
-+HTTPREAD:1
-
++HTTPREAD:41
 OK
 >> AT+HTTPTERM
-
-OK
-
-+SAPBR 1: DEACT
-
-NORMAL POWER DOWN
-Received: 5
+ OK
+ +SAPBR 1: DEACT
+  NORMAL POWER DOWN
+  Received: [{"status_code":201}³ŠÙ
+  Sleeping 1.50m
 
 Errors
 Even here we get doHTTPGET failed! Is is because response code is 201 instead of 200 but even though it is posting to Ubidots
